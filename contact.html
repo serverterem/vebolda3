@@ -6,15 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="Free Bootstrap Themes by Html5xCss3 dot com - Free Responsive Html5 Templates">
     <meta name="author" content="http://www.Html5xCss3.com">
-	
+
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
 	
 	<link href="css/style.css" rel="stylesheet">
-	
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
+	<script src="js/bootstrap.min.js"></script>
+	
 </head>
-<body class="index-page">
+<body class="single-page">
 	<div class="wrap-body">
 
 			<nav id="menu" class="navbar">
@@ -25,10 +25,10 @@
 					</div>
 					<div class="collapse navbar-collapse navbar-ex1-collapse">
 						<ul class="nav navbar-nav">
-							<li class="active"><a href="index.html">Főoldal</a></li>
+							<li><a href="index.html">Főoldal</a></li>
 							<li><a href="single.html">10/I</a></li>
 							<li><a href="gallery.html">Galéria</a></li>
-							<li><a href="contact.html">Kapcsolat</a></li>
+							<li class="active"><a href="contact.html">Kapcsolat</a></li>
 						</ul>
 					</div>
 					</div>
@@ -39,38 +39,36 @@
 		<div id="page-content" class="container">
 			<div class="row">
 
-				<section class="box-content box-1 box-style-0">
+				<section class="box-content box-2 box-style-0">
 					<div class="flex-box no-gutter">
-						<div class="col-sm-5">
-							<div class="box-image">
-								<img src="images/1.jpg" alt="" />
-							</div>
-						</div>
-						<div class="col-sm-7">
+						<div class="col-sm-12">
 							<div class="box-text">
-								<div class="box-text-inner pd-large-lg pd-small-xs">
+								<div class="box-text-inner pd-exlarge-lg pd-small-xs">
 									<div class="heading">
-										<h2>Osztlykép</h2>
+										<h2>Üzenet küldés</h2>
 									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
-				
-				<section class="box-content box-3 box-style-0">
-					<div class="flex-box no-gutter">
-						<div class="col-sm-5">
-							<div class="box-image">
-								<img src="images/2.jpg" alt="" />
-							</div>
-						</div>
-						<div class="col-sm-7">
-							<div class="box-text">
-								<div class="box-text-inner pd-large-lg pd-small-xs">
-									<div class="heading">
-										<h2>Osztálykirándulás</h2>
-									</div>
+									<form class="clearfix" role="form" id="contactForm" method="post" action="contact.php">
+										<div class="row">
+											<div class="col-md-6">
+												<div class="form-group">
+													<input type="text" class="form-control" name="name" id="name" placeholder="Név" required="required" />
+												</div>
+												<div class="form-group">
+													<input type="email" class="form-control" name="email" id="email" placeholder="Email" required="required" />
+												</div>
+												<div class="form-group">
+													<input type="number" class="form-control" name="phone" id="phone" placeholder="Telefonszám" required="required" />
+												</div>
+											</div>
+											<div class="col-md-6">
+												<div class="form-group">
+													<textarea name="message" id="message" class="form-control" rows="4" cols="25" required="required"
+													placeholder="Üzenet"></textarea>
+												</div>	
+											</div>
+										</div>
+										<button type="submit" id="form-submit" class="btn btn-skin pull-right">Küldés</button>
+									</form>
 								</div>
 							</div>
 						</div>
@@ -78,7 +76,6 @@
 				</section>
 			</div>
 		</div>
-		
 		<footer id="page-footer" class="footer-contact">
 			<div class="wrap-footer container">
 				<div class="row">
@@ -93,10 +90,10 @@
 									<ul class="list-unstyled">
 										
 										<li class="contact-group">
-										  <span class="adr-heading">Cím</span>
+										  <span class="adr-heading">Utca</span>
 										  <span class="adr-info">6100 Kiskunfélegyháza, Kossuth u. 24.</span>
 										</li>
-									
+										
 										<li class="contact-group">
 										  <span class="adr-heading">OM</span>
 										  <span class="adr-info">203365</span>
@@ -121,13 +118,19 @@
 				</div>
 			</div>
 			<div class="bottom-footer">
-				</div>
 			</div>
 		</footer>
 
+	
 	</div>
-
-	<script src="js/bootstrap.min.js"></script>
+	
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/main.js"></script>
+	<script>
+		$(document).ready(function() {
+		  $(".line-2").arctext({radius: 400});
+		});
+	</script>
 	
 </body>
 </html>
